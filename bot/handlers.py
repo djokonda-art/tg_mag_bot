@@ -3,10 +3,11 @@ from keyboards import keyboard
 from aiogram import types
 from aiogram.dispatcher.filters import Command
 
-@dp.message_handler(Command('start'))
+@dp.message_handler(Command("start"))
 async def cmd_start(message: types.Message):
-    await bot.answer('Тестируем WebApp!', reply_markup=keyboard)
-
+    await bot.send_message(message.chat.id, 'Тестируем WebApp!',
+                           reply_markup=keyboard)
+    
 PRICE = {
     '1': [types.LabeledPrice(label='Item1', amount=100000)],
     '2': [types.LabeledPrice(label='Item2', amount=200000)],
