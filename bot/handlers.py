@@ -4,9 +4,8 @@ from aiogram import types
 from aiogram.dispatcher.filters import Command
 
 @dp.message_handler(Command('start'))
-async def start(message: types.Message):
-    await bot.send_message(message.chat.id, 'Тестируем WebApp!',
-                           reply_markup=keyboard)
+async def cmd_start(message: types.Message):
+    await bot.answer('Тестируем WebApp!', reply_markup=keyboard)
 
 PRICE = {
     '1': [types.LabeledPrice(label='Item1', amount=100000)],
