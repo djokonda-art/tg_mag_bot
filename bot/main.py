@@ -1,8 +1,7 @@
-from aiogram import Bot, Dispatcher
+from aiogram import Bot, Dispatcher, types
 import asyncio
-from config import BOT_TOKEN
 
-bot = Bot(token='BOT_TOKEN')
+bot = Bot(token="1577735395:AAHYeWVDVgBiXf0in8uPGgof4pWAdNRzkMg")
 dp = Dispatcher(bot=bot)
 
 async def main():
