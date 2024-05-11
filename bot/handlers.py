@@ -4,7 +4,7 @@ from aiogram import types
 from aiogram.dispatcher.filters import Command
 
 @dp.message_handler(Command('start'))
-async def cmd_start(message: types.Message):
+async def start(message: types.Message):
     await bot.send_message(message.chat.id, 'Тестируем WebApp!',
                            reply_markup=keyboard)
     
