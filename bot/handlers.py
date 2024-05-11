@@ -3,7 +3,7 @@ from keyboards import keyboard
 from aiogram import types
 from aiogram.dispatcher.filters import Command
 
-@dp.message_handler(Command("start"))
+@dp.message_handler(Command('start'))
 async def cmd_start(message: types.Message):
     await bot.send_message(message.chat.id, 'Тестируем WebApp!',
                            reply_markup=keyboard)
@@ -22,7 +22,7 @@ async def buy_process(web_app_message):
     await bot.send_invoice(web_app_message.chat.id,
                            title='Laptop',
                            description='Description',
-                           provider_token='pay_token',
+                           provider_token='381764678:TEST:84904',
                            currency='rub',
                            need_email=True,
                            prices=PRICE[f'{web_app_message.web_app_data.data}'],
