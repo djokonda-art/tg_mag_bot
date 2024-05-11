@@ -1,5 +1,4 @@
 from main import bot, dp
-from bot import keyboards
 from keyboards import keyboard
 from aiogram import types
 from aiogram.dispatcher.filters import Command
